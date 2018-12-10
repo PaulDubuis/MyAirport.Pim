@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE54417A-1455-44D2-B89B-41A1AA46FF52}</ProjectGuid>
+    <ProjectGuid>{624059E8-13E9-4490-BFCD-886A48FD8A76}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Models.Factory</RootNamespace>
-    <AssemblyName>Models.Factory</AssemblyName>
+    <RootNamespace>Models.Sql</RootNamespace>
+    <AssemblyName>Models.Sql</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,21 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory.cs" />
+    <Compile Include="Sql.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{1ddd8542-9ead-4aea-9a65-899b3505a60d}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models.AbstractDefinition\Models.AbstractDefinition.csproj">
       <Project>{d3d6464c-a28e-4119-b673-a51057ce7412}</Project>
       <Name>Models.AbstractDefinition</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Models.Natif\Models.Natif.csproj">
-      <Project>{5f5e1489-61e2-4955-a6ba-ebe75c9c3d48}</Project>
-      <Name>Models.Natif</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Models.Sql\Models.Sql.csproj">
-      <Project>{624059e8-13e9-4490-bfcd-886a48fd8a76}</Project>
-      <Name>Models.Sql</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
