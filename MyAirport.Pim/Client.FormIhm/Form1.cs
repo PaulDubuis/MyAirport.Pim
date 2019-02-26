@@ -21,5 +21,10 @@ namespace Client.FormIhm
         {
             var bagage = MyAirport.Pim.Models.Factory.Model.GetBagage("023232546100");
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
