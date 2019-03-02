@@ -26,6 +26,7 @@ namespace Models.Sql
             + " from BAGAGE b"
             + " where bp.ID_BAGAGE = b.ID_BAGAGE";
 
+
         public override BagageDefinition GetBagage(int idBagage)
         {
             BagageDefinition bagRes = null;
@@ -49,7 +50,6 @@ namespace Models.Sql
             return bagRes;
         }
 
-
         public override List<BagageDefinition> GetBagage(string codeIataBagage)
         {
             List<BagageDefinition> bagsRes = new List<BagageDefinition>();
@@ -62,10 +62,11 @@ namespace Models.Sql
 
                 if (sdr.Read())
                 {
-                    int nbBagage = 
+                    int nbBagage = sdr.GetInt32(sdr.GetOrdinal("ID_BAGAGE"));
                 }
             }
-                return bagsRes;
+
+            return bagsRes;
         }
     }
 }
